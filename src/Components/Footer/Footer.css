@@ -1,0 +1,80 @@
+.footer {
+    background-color: #000; /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo cột */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  }
+  
+  .footer-logo {
+    margin-bottom: 20px; /* Khoảng cách giữa logo và các phần tử bên dưới */
+  }
+  
+  .footer-logo img {
+    width: 150px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto; /* Đảm bảo tỷ lệ ảnh không bị biến dạng */
+  }
+  
+  .footer-links-and-circles {
+    display: flex;
+    flex-direction: row; /* Đặt các phần tử theo hàng */
+    gap: 60px; /* Khoảng cách giữa footer-links và footer-circles */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    margin-bottom: 40px; /* Tăng khoảng cách bên dưới */
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Đặt các liên kết theo hàng */
+    gap: 60px; /* Khoảng cách giữa các liên kết */
+    margin: 0;
+  }
+  
+  .footer-links a {
+    color: #F0DCC0CC; /* Màu chữ */
+    text-decoration: none;
+    font-size: 18px; /* Điều chỉnh kích thước chữ */
+  }
+  
+  .footer-circles {
+    display: flex;
+    flex-direction: row; /* Đặt các chấm tròn theo hàng */
+    gap: 60px; /* Khoảng cách giữa các chấm tròn */
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #F0DCC0CC; 
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  /* Media query cho điện thoại và iPad */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Đặt các phần tử trong footer-container theo cột */
+    }
+  
+    .footer-links-and-circles {
+      flex-direction: column; /* Đặt các phần tử bên trong theo cột */
+      gap: 30px; /* Khoảng cách giữa các phần tử nhỏ hơn */
+    }
+  
+    .footer-links{
+      gap: 30px; /* Khoảng cách giữa các liên kết và các chấm tròn nhỏ hơn */
+    }
+    .footer-links{
+        gap: 30px; /* Khoảng cách giữa các liên kết và các chấm tròn nhỏ hơn */
+      }
+  }
+  
