@@ -6,6 +6,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import Marketplace from './Components/Marketplace/Marketplace';
+import { ExPro } from './Components/ExcitingPromotion/ExPro';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +25,7 @@ function App() {
               <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
               </p>
-              
+              <ExPro/>
               <Footer />
             </>
           }
