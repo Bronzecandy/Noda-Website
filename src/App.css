@@ -29,5 +29,22 @@ body {
   background-repeat: no-repeat; /* Ngăn không cho ảnh nền lặp lại */
 }
 
+@keyframes rotate3d {
+  from {
+    transform: rotateY(0deg);
+  }
 
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate3d {
+  perspective: 1000px;
+}
+
+.spin {
+  animation: rotate3d 3s linear infinite;
+  transform-style: preserve-3d;
+}
 
