@@ -1,22 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './Components/Header'
-import Banner from './Components/Banner'
-import Introduce from './Components/Introduce'
+// src/App.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import Footer from './Components/Footer/Footer';
+import Marketplace from './Components/Marketplace/Marketplace';
+import { ExPro } from './Components/ExcitingPromotion/ExPro';
+import Header from './Components/Header/Header';
+import Banner from './Components/Banner/Banner';
+import Introduce from './Components/Banner/Introduce';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
   return (
-    <div className='w-[100vw] h-[100vh]'>
-      <Header/>
-      <Banner/>
-      <div className=" bg-[url('/image/bg_content.png')] bg-center bg-no-repeat bg-cover">
-        <Introduce />
-      </div>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route
+          path="/marketplace"
+          element={<Marketplace />}
+        />
+        <Route
+          path="*"
+          element={
+            <>
+            <Header/>
+            <Banner/>
+            <Introduce/>
+              <p className="read-the-docs">
+                Click on the Vite and React logos to learn more
+              </p>
+              <ExPro/>
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,34 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.no-scrollbar {
+  overflow: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('assets//background-img.jpg'); /* Đường dẫn tới ảnh nền của bạn */
+  background-size: cover; /* Đặt ảnh nền bao phủ toàn bộ màn hình */
+  background-position: center; /* Đặt vị trí ảnh nền ở giữa */
+  background-repeat: no-repeat; /* Ngăn không cho ảnh nền lặp lại */
+}
+
+
+
+
