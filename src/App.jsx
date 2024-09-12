@@ -7,6 +7,7 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Marketplace from './Components/Marketplace/Marketplace';
 import { ExPro } from './Components/ExcitingPromotion/ExPro';
+import Header from './Components/Header/Header';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
           path="*"
           element={
             <>
+            <Header/>
               <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
               </p>
