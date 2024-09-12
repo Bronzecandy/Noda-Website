@@ -8,8 +8,8 @@ import Footer from './Components/Footer/Footer';
 import Marketplace from './Components/Marketplace/Marketplace';
 import { ExPro } from './Components/ExcitingPromotion/ExPro';
 import Header from './Components/Header/Header';
-import Banner from './Components/Banner/Banner';
 import Introduce from './Components/Banner/Introduce';
+import Banner from './Components/Banner/Banner';
 
 function App() {
   const [count, setCount] = useState(0);
