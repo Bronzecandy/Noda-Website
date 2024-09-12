@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Rowdies:wght@400;700&display=swap');
+
+.PS_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 900px;
+    color: #703519;
+}
+
+.PS_left{
+    background: url('../../assets/Asset.png') no-repeat;
+    background-size: cover;
+    width: 630px;
+    height: 430px;
+    rotate: -90deg;
+    position: absolute;
+    left: 155px;
+    top: 2665px;
+    z-index: 1;
+}
+
+.PS_right{
+    background: url('../../assets/Artboard_20.png') no-repeat;
+    background-size: cover;
+    width: 1120px;
+    height: 800px;
+    position: absolute;
+    right: -20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.PS_title{
+    padding-top: 150px;
+    font-family: "Rowdies", cursive;
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+.PS_content{
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    padding-inline: 350px;
+    margin-left: 60px;
+    text-align: justify;
+}
+
+.PS_content p{
+    margin-block: 20px;
+}
+
+.PS_button{
+    background: url('../../assets/Button.png') no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 150px;
+    margin-left: 450px;
+}
+
+.PS_button p{
+    padding-top: 87px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: #F0DCC0CC;
+}

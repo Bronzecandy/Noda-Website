@@ -10,6 +10,7 @@ import { ExPro } from './Components/ExcitingPromotion/ExPro';
 import Header from './Components/Header/Header';
 import Introduce from './Components/Banner/Introduce';
 import Banner from './Components/Banner/Banner';
+import { Partnership } from './Components/Partnership/Partnership';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +33,7 @@ function App() {
                 Click on the Vite and React logos to learn more
               </p>
               <ExPro/>
+              <Partnership/>
               <Footer />
             </>
           }
