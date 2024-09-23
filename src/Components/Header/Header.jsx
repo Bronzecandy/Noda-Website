@@ -1,27 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Header() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
-        <div className='w-[100vw] fixed mt-5 top-0 left-0 flex justify-center items-center z-50'>
-            <nav className="w-[80vw] relative  ">
-                <img src="/image/header-bg.png " alt="" className=' h-[12vh]'/>
-                <div className="absolute top-0 left-0 ml-10 container mx-auto flex items-center ">
-                   
-                        <a href="#">
-                            <img src="/image/logo.png" alt="Logo" className='h-[10vh] mr-[10vw]' />
-                        </a>
-                    <ul className="flex j items-center gap-4 w-full">
+        <header className='w-full fixed top-0 left-0 flex justify-center items-start z-50 sm:mt-3'>
+            <nav className="relative w-full max-w-[100vw] sm:max-w-[80vw] h-[6vh] sm:h-[10vh]">
+                <img
+                    src="/image/header-bg.png"
+                    alt="Background"
+                    className='w-full h-full object-cover'
+                />
+                <div className="absolute inset-0 flex items-center justify-between sm:justify-start px-4 mb-2 sm:px-6">
+                    {/* Logo */}
+                    <a href="#" className='flex items-center mr-5'>
+                        <img
+                            src="/image/logo.png"
+                            alt="Logo"
+                            className='h-[3rem] sm:h-[3rem]'
+                        />
+                    </a>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="block sm:hidden text-white"
+                        onClick={toggleMobileMenu}
+                        aria-expanded={isMobileMenuOpen}
+                        aria-label="Toggle mobile navigation menu"
+                    >
+                        <span className="text-2xl">☰</span> {/* Replace with an icon */}
+                    </button>
+
+                    {/* Mobile Menu (hidden on larger screens) */}
+                    <ul className={`fixed top-[4.5vh] right-0 w-1/2 bg-amber-900 p-3 space-y-4 ${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
+                        <li className='border-b-2 w-[100%]'>
+                            <a href="#" className="text-white hover:text-gray-400">
+                                <span className='font-robotoSlab text-[0.8rem] font-bold text-[#F0D0C0]'>
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li className='border-b-2 w-[100%]'>
+                            <a href="#" className="text-white hover:text-gray-400">
+                                <span className='font-robotoSlab text-[0.8rem] font-bold text-[#F0D0C0]'>
+                                    Marketplace
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    {/* Desktop Menu (hidden on smaller screens) */}
+                    <ul className="hidden sm:flex sm:space-x-4 sm:bg-transparent sm:p-0">
                         <li>
-                            <a href="#" className="text-white hover:text-gray-400"><span className=' mr-[10vw] font-robotoSlab mt-8 text-3xl font-bold text-[#F0D0C0]'>Home</span></a>
+                            <a href="#" className="text-white hover:text-gray-400">
+                                <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0]'>
+                                    Home
+                                </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" className="text-white hover:text-gray-400"><span className='   font-robotoSlab mt-8 text-3xl font-bold text-[#F0D0C0]'>Marketplace</span></a>
+                            <a href="#" className="text-white hover:text-gray-400">
+                                <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0]'>
+                                    Marketplace
+                                </span>
+                            </a>
                         </li>
-                        
                     </ul>
                 </div>
             </nav>
-
-        </div>
+        </header>
     );
 }
