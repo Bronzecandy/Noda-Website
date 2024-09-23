@@ -29,6 +29,7 @@ export default function Banner() {
                     alt="Artboard"
                 />
             </div>
+            
         </div>
     );
 }

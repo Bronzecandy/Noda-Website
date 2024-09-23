@@ -1,36 +1,43 @@
+
 import React from 'react';
 import Button from './button';
 
 export default function Introduce() {
     return (
-        <div className='flex items-center justify-center relative'>
+        <div className=' flex md:flex-row items-center justify-center relative space-y-6 md:space-y-0 md:space-x-12'>
+            {/* Left Section with Images */}
             <div className='relative'>
                 <img
                     src="/image/table.png"
-                    alt=""
+                    alt="Table"
+                    className="w-[80vw] md:w-[40vw]"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-offset="200"
                 />
                 <img
                     src="/image/coin.png"
-                    alt=""
-                    className='absolute w-[35%] -top-28 bottom-0 -left-32 right-0 m-auto spin'
+                    alt="Coin"
+                    className='absolute w-[35%] md:w-[25%] top-0 md:-top-20 bottom-0 left-0 md:-left-32 right-0 m-auto spin'
                     data-aos="slide-left"
                     data-aos-duration="1000"
                     data-aos-offset="200"
                 />
             </div>
-            <div className='relative' data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200">
-                <img src="/image/board2.png" alt="" />
-                <div className='absolute top-0 left-[5rem] right-0 bottom-0 m-auto w-[30vw] flex justify-center items-center flex-col gap-4'>
-                    <span className='font-rowdies text-3xl font-bold leading-[59.62px] text-center text-[#703519]'>
+
+            {/* Right Section with Text and Button */}
+            <div className='relative md:w-[45%]' data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200">
+                <img src="/image/board2.png" alt="Board" className="w-[80vw] md:w-full" />
+                <div className='absolute top-1/4 sm:top-0  left-4 md:left-8 lg:left-[5rem] right-0 bottom-0 m-auto w-[70%] md:w-[60%] flex justify-center items-center flex-col '>
+                    <span className='font-rowdies  text-[10px] md:text-3xl font-bold leading-tight text-center text-[#703519]'>
                         What is NODA ?
                     </span>
-                    <span className='font-robotoSlab text-2xl font-normal leading-[47.48px] text-left text-[#703519]'>
+                    <span className='font-robotoSlab  ml-2  text-[7px] md:text-xl font-normal  text-left text-[#703519]'>
                         Nong Dan Online is a game application for mobile phones, developed by Noda game studio. This game uses a cryptocurrency whose exchange is BNB Binance. Nong Dan Online is expected to be a game worth experiencing.
                     </span>
-                    <Button content={"Explore Us!"} />
+                    <div className=' w-[50%] sm:w-[100%] text-[6px]  sm:text-xl'>
+                        <Button content={"Explore Us!"} />
+                    </div>
                 </div>
             </div>
         </div>

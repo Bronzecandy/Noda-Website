@@ -8,7 +8,7 @@ export default function Button({content}) {
         alt="Button Background"
         className='w-full h-full object-contain'
       />
-      <span className='absolute font-robotoSlab text-sm sm:text-xl font-bold mt-[2vh] sm:mt-[5vh] text-[#F0D0C0]'>
+      <span className='absolute font-robotoSlab  font-bold mt-3 sm:mt-[5vh] text-[#F0D0C0]'>
         {content}
       </span>
     </button>
