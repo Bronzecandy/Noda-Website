@@ -12,7 +12,7 @@ export const ExPro = () => {
     };
 
     return (
-        <div className='ExPro_container'>
+        <div className='ExPro_container' data-aos="fade-up" data-aos-anchor-placement="bottom-center">
             <div className='ExPro_background'>
                 <div className='ExPro_title'>
                     <h4>Exciting Promotions at Nông Dân Online</h4>
@@ -32,7 +32,7 @@ export const ExPro = () => {
                 <div className='ExPro_content'>
                     {activeTab === 'New' && (
                         <div className='content_new'>
-                            <p>Get a 20% discount when purchasing Rabbit NFT within 7 days of creating your account!</p>
+                            <p >Get a 20% discount when purchasing Rabbit NFT within 7 days of creating your account!</p>
                             <p>Join our referral program to earn commissions when your friends purchase Rabbit NFT or participate in in-game activities!</p>
                         </div>
                     )}
