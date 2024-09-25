@@ -31,7 +31,64 @@
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   background-position: center; /* Căn giữa ảnh */
   background-repeat: no-repeat; /* Không lặp lại ảnh */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà khi hover */
 }
+/* CSS cho .item-market và các phần tử bên trong */
+.item-market {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.item-market {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.item-market:hover {
+  transform: scale(1.3); /* Phóng to .item-market */
+}
+
+.item-market .paper-clip,
+.item-market .nft-duc1,
+.item-market .nft-duc2,
+.item-market .nft-duc3,
+.item-market .nft-duc4,
+.item-market .nft-duc5,
+.item-market .nft-duc6,
+.item-market .nft-duc7,
+.item-market .nft-duc8,
+.item-market .nft-duc9,
+.item-market .nft-duc10 {
+  transition: transform 0.3s ease;
+}
+
+.item-market:hover .paper-clip,
+.item-market:hover .nft-duc1,
+.item-market:hover .nft-duc2,
+.item-market:hover .nft-duc3,
+.item-market:hover .nft-duc4,
+.item-market:hover .nft-duc5,
+.item-market:hover .nft-duc6,
+.item-market:hover .nft-duc7,
+.item-market:hover .nft-duc8,
+.item-market:hover .nft-duc9,
+.item-market:hover .nft-duc10 {
+  transform: scale(0.7) translateY(-20px); /* Thu nhỏ và di chuyển lên trên */
+}
+.nft-name{
+  margin-top: -30px;
+  font-size: 0.8rem;
+  color: #703519;
+  font-weight: 530;
+}
+.nft-price{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #703519;
+}
+
 
 .paper-clip{
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
@@ -43,6 +100,8 @@
   background-repeat: no-repeat; /* Không lặp lại ảnh */
   margin: auto;
 }
+
+
 #turn-right{
   transform: scaleX(-1);
 }
@@ -136,12 +195,23 @@
   margin: auto;
  
 }
+.item-market .nft-name, 
+.item-market .nft-price {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+.item-market:hover .nft-name, 
+.item-market:hover .nft-price {
+    opacity: 1;
+}
 
 .content-mobile{
   display: none;
 }
-
+.container{
+  display: none;
+}
 /* Media Query for Laptops (Width 1366px or smaller) */
 @media (max-width: 1366px) {
   .table-market {
@@ -175,6 +245,20 @@
   .nft-duc10 {
     height: 100px; /* Chiều cao của ảnh NFT */
     background-size: contain; /* Giữ tỷ lệ ảnh */
+  }
+  .nft-name{
+    margin-top: -30px;
+    font-size: 0.6rem;
+    color: #703519;
+    font-weight: 530;
+  }
+  .nft-price{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #703519;
+  }
+  .container{
+    display: none;
   }
 }
 
@@ -212,31 +296,70 @@
     height: 67px; /* Chiều cao của ảnh NFT */
     background-size: contain; /* Giữ tỷ lệ ảnh */
   }
-}
-
-/* Media Query for Mobile Devices (Width up to 820px) */
-@media (max-width: 768px) {
-  .table-market {
+  .nft-name{
+    margin-top: -20px;
+    font-size: 0.5rem;
+    color: #703519;
+    font-weight: 530;
+  }
+  .nft-price{
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #703519;
+  }
+  .container{
     display: none;
   }
+}
 
-  .row {
-    gap: 10px; /* Khoảng cách nhỏ hơn giữa các item */
-    justify-content: center; /* Căn giữa các item theo chiều ngang */
+/* Media Query cho thiết bị di động (chiều rộng lên đến 767px) */
+@media (max-width: 767px) {
+  .table-market {
+    display: none; /* Ẩn .table-market trên màn hình nhỏ */
   }
 
+.swiper_container {
+  width: 100%;
+  max-width: 100%;
+  height: 400px; /* Chiều cao phần tử chứa ảnh */
+  overflow: hidden; /* Ẩn phần tràn ra ngoài */
+  position: relative;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  background-size: contain; /* Đảm bảo ảnh nền xuất hiện đầy đủ mà không bị cắt */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  
+.background-mb {
+  background-image: url(/src/assets/table-market.png);
+  background-size: 110% 100%; /* Điều chỉnh theo tỷ lệ phần trăm để làm cho ảnh nền lớn hơn */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
   .item-market {
-    width: 100px; /* Giảm chiều rộng cho các item */
-    height: 100px; /* Giảm chiều cao cho các item để vừa với màn hình */
-    background-size: cover; /* Ảnh sẽ bao phủ toàn bộ khung */
-    margin: auto; /* Căn giữa theo chiều ngang */
+    height: 300px; /* Đặt chiều cao lớn hơn cho item-market */
+    width: 200px; /* Đặt chiều rộng cố định cho item-market */
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ phần tử */
+    position: relative; /* Đảm bảo phần tử có vị trí xác định */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển tiếp mượt mà */
+    margin: 0 auto; /* Căn giữa phần tử nếu cần */
+    overflow: hidden; /* Ẩn phần tràn ra ngoài */
+    padding: 10px; /* Thêm padding để giữ khoảng cách bên trong */
+    margin-top: 35px;
+  }
+
+  .item-market:hover {
+    transform: scale(1); /* Tăng kích thước nhẹ để thấy rõ hiệu ứng */
+    z-index: 10; /* Đảm bảo phần tử không bị che khuất */
+   
   }
 
   .paper-clip {
-    height: 25px; /* Giảm chiều cao của ảnh paper-clip */
-    width: auto; /* Đặt chiều rộng tự động theo tỷ lệ */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    margin: auto; /* Căn giữa theo chiều ngang */
+    height: 60px; /* Tăng chiều cao của paper-clip */
   }
 
   .nft-duc1,
@@ -249,165 +372,21 @@
   .nft-duc8,
   .nft-duc9,
   .nft-duc10 {
-    height: 70px; /* Giảm chiều cao của ảnh NFT */
-    width: 70px; /* Giảm chiều rộng của ảnh NFT */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    margin: auto; /* Căn giữa theo chiều ngang */
+    height: 190px; /* Tăng chiều cao của các ảnh NFT */
   }
-  .content-mobile {
-    display: flex; /* Sử dụng Flexbox để sắp xếp các hàng */
-    flex-direction: column; /* Các hàng sẽ nằm dọc */
-    gap: 15px; /* Khoảng cách giữa các hàng */
-    width: 100%; /* Chiếm toàn bộ chiều rộng của khung chứa */
-    padding: 5rem 0; /* Thêm khoảng cách 2 rem bên trên và dưới */
-  }
-  
-  .row-mobile {
-    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
-    gap: 10px; /* Khoảng cách giữa các phần tử con */
-  }
-  
-  .scroll {
-    background-image: url(/src/assets/item-mobile4.png);
-    width: 100%; /* Đặt chiều rộng chiếm toàn bộ khung */
-    height: 8rem; /* Đặt chiều cao cố định cho scroll */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-    background-position: center; /* Căn giữa ảnh nền */
-    margin: auto;
-  }
-  .scroll1 {
-    background-image: url(/src/assets/item-mobile2.png);
-    width: 100%; /* Đặt chiều rộng chiếm toàn bộ khung */
-    height: 8rem; /* Đặt chiều cao cố định cho scroll */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-    background-position: center; /* Căn giữa ảnh nền */
-    margin: auto;
-  }
-  .scroll2 {
-    background-image: url(/src/assets/item-mobile1.png);
-    width: 100%; /* Đặt chiều rộng chiếm toàn bộ khung */
-    height: 8rem; /* Đặt chiều cao cố định cho scroll */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-    background-position: center; /* Căn giữa ảnh nền */
-    margin: auto;
-  }
-  .scroll3 {
-    background-image: url(/src/assets/item-mobile3.png);
-    width: 100%; /* Đặt chiều rộng chiếm toàn bộ khung */
-    height: 8rem; /* Đặt chiều cao cố định cho scroll */
-    background-size: contain; /* Giữ tỷ lệ ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-    background-position: center; /* Căn giữa ảnh nền */
-    margin: auto;
-  }
-  .nft-duc1-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 100px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC2.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 0.8rem;
-  }
-  .nft-duc2-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 95px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/cool_3.png); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.5rem;
-   
-  }
-  .nft-duc3-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 90px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/cool_2.png); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.7rem;
 
-   
+  .nft-name {
+    font-size: 1rem; /* Tăng kích thước chữ cho tên NFT */
+    margin-top: -2.3rem;
   }
-  .nft-duc4-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 92px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC3.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.3rem;
 
-   
+  .nft-price {
+    font-size: 1.2rem; /* Tăng kích thước chữ cho giá NFT */
   }
-  .nft-duc5-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 100px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/cool_1.png); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.3rem;
-
-   
-  }
-  .nft-duc6-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 92px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC5.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.5rem;
-
-   
-  }
-  .nft-duc7-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 92px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC4.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.3rem;
-
-   
-  }
-  .nft-duc8-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 90px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC6.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.3rem;
-
-   
-  }
-  .nft-duc9-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 95px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/cool_3.png); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.3rem;
-
-   
-  }
-  .nft-duc10-mb{
-    aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
-    width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
-    height: 95px; /* Đặt chiều cao cố định cho item */
-    background-image: url(/src/assets/NFT_DUC1.PNG); /* Đường dẫn tới ảnh nền */
-    background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
-    margin: auto;
-    margin-top: 1.7rem;
-
-   
+  .container{
+    display: block;
   }
 }
+
+
+

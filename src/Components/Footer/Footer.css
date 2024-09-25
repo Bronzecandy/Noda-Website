@@ -58,6 +58,25 @@
     border-radius: 50%;
     display: inline-block;
   }
+  .footer-links a {
+    color: #F0DCC0CC; /* Màu chữ */
+    text-decoration: none;
+    font-size: 18px; /* Điều chỉnh kích thước chữ */
+    transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu chữ */
+  }
+  
+  .footer-links a:hover {
+    color: #F0DCC0; /* Màu chữ sáng hơn khi hover */
+  }
+  
+  .footer-circles .circle {
+    background-color: #F0DCC0CC; /* Màu nền của các chấm tròn */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền */
+  }
+  
+  .footer-circles .circle:hover {
+    background-color: #F0DCC0; /* Màu nền sáng hơn của các chấm tròn khi hover */
+  }
   
   /* Media query cho điện thoại và iPad */
   @media (max-width: 768px) {
