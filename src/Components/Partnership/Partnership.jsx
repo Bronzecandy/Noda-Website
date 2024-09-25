@@ -5,8 +5,8 @@ import './Partnership.css';
 export const Partnership = () => {
     return (
         <div className='PS_container'>
-            <div className='PS_left' data-aos="fade-down"></div>
-            <div className='PS_right' data-aos="fade-left" data-aos-offset="300">
+            <div className='PS_left' data-aos="zoom-in-down"></div>
+            <div className='PS_right' data-aos="zoom-in-up">
                 <div className='PS_title'>
                     <h4>Partnership Program</h4>
                 </div>
