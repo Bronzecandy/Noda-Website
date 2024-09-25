@@ -7,6 +7,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  font-family: "Roboto Slab";
 }
 .no-scrollbar {
   overflow: hidden;
@@ -24,11 +25,13 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('assets//background-img.jpg'); /* Đường dẫn tới ảnh nền của bạn */
-  background-size: cover; /* Đặt ảnh nền bao phủ toàn bộ màn hình */
+  background-size: 40%; /* Đặt ảnh nền bao phủ toàn bộ màn hình */
   background-position: center; /* Đặt vị trí ảnh nền ở giữa */
-  background-repeat: no-repeat; /* Ngăn không cho ảnh nền lặp lại */
+  background-repeat: repeat; 
 }
-
+h1,h2{
+  font-family: 'Rowdies';
+}
 @keyframes rotate3d {
   from {
     transform: rotateY(0deg);

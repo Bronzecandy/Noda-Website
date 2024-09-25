@@ -1,8 +1,5 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import Marketplace from './Components/Marketplace/Marketplace';
@@ -11,9 +8,8 @@ import Header from './Components/Header/Header';
 import Introduce from './Components/Banner/Introduce';
 import Banner from './Components/Banner/Banner';
 import { Partnership } from './Components/Partnership/Partnership';
-
+import MarketCapitalization from './Components/Market capitalization/MarketCapitalization';
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Router>
@@ -26,14 +22,12 @@ function App() {
           path="*"
           element={
             <>
-            <Header/>
-            <Banner/>
-            <Introduce/>
-              <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-              </p>
-              <ExPro/>
-              <Partnership/>
+              <Header />
+              <Banner />
+              <Introduce />
+              <MarketCapitalization/>
+              <ExPro />
+              <Partnership />
               <Footer />
             </>
           }
