@@ -15,9 +15,6 @@ export default function Banner() {
                 {/* Button Section */}
                 <div className='absolute top-[65%] left-[30%] flex justify-center items-center'>
                     <Button content={"Play Now"} />
-                    {/* <button className='w-[30vw] h-[10vh] sm:w-[20vw] md:w-[15vw] lg:w-[10vw] lg:h-[8vh] p-0'>
-                      
-                    </button> */}
                 </div>
             </div>
 

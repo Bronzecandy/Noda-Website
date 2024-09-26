@@ -18,7 +18,7 @@ export default function Introduce() {
                 <img
                     src="/image/coin.png"
                     alt="Coin"
-                    className='absolute w-[35%] md:w-[25%] top-0 md:-top-20 bottom-0 left-0 md:-left-32 right-0 m-auto spin'
+                    className='absolute w-[35%] md:w-[25%] top-0 md:-top-20 bottom-0 left-0 md:-left-32 right-0 m-auto'
                     data-aos="slide-left"
                     data-aos-duration="1000"
                     data-aos-offset="200"
@@ -35,7 +35,7 @@ export default function Introduce() {
                     <span className='font-robotoSlab  ml-2  text-[7px] md:text-xl font-normal  text-left text-[#703519]'>
                         Nong Dan Online is a game application for mobile phones, developed by Noda game studio. This game uses a cryptocurrency whose exchange is BNB Binance. Nong Dan Online is expected to be a game worth experiencing.
                     </span>
-                    <div className=' w-[50%] sm:w-[100%] text-[6px]  sm:text-xl'>
+                    <div className=' w-[50%] sm:w-[100%] h-[22vh]'>
                         <Button content={"Explore Us!"} />
                     </div>
                 </div>

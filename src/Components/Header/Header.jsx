@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header className='w-full fixed top-0 left-0 flex justify-center items-start z-50 sm:mt-3'>
-            <nav className="relative w-full max-w-[100vw] sm:max-w-[80vw] h-[6vh] sm:h-[10vh]">
+            <nav className="relative  max-w-[100vw] sm:max-w-[80vw] h-[9vh] sm:h-[10vh]">
                 <img
                     src="/image/header-bg.png"
                     alt="Background"
@@ -21,7 +21,7 @@ export default function Header() {
                         <img
                             src="/image/logo.png"
                             alt="Logo"
-                            className='h-[3rem] sm:h-[3rem]'
+                            className='h-[3rem] sm:h-[4rem]'
                         />
                     </a>
 
@@ -36,7 +36,7 @@ export default function Header() {
                     </button>
 
                     {/* Mobile Menu (hidden on larger screens) */}
-                    <ul className={`fixed top-[4.5vh] right-0 w-1/2 bg-amber-900 p-3 space-y-4 ${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
+                    <ul className={`fixed top-[7vh] rounded-md right-0 w-1/2 bg-amber-900 p-3 space-y-4 ${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
                         <li className='border-b-2 w-[100%]'>
                             <a href="#" className="text-white hover:text-gray-400">
                                 <span className='font-robotoSlab text-[0.8rem] font-bold text-[#F0D0C0]'>
@@ -55,20 +55,16 @@ export default function Header() {
 
                     {/* Desktop Menu (hidden on smaller screens) */}
                     <ul className="hidden sm:flex sm:space-x-4 sm:bg-transparent sm:p-0">
-                        <li>
-                            <a href="#" className="text-white hover:text-gray-400">
-                                <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0]'>
+                            <a href="#" className="text-white hover:text-gray-400 w-[10vw]">
+                                <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                     Home
                                 </span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="#" className="text-white hover:text-gray-400">
-                                <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0]'>
+                        <a href="#" className="text-white hover:text-gray-400 w-[10vw] ">
+                            <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                     Marketplace
                                 </span>
                             </a>
-                        </li>
                     </ul>
                 </div>
             </nav>
