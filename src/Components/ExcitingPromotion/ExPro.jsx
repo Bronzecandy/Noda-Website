@@ -12,7 +12,7 @@ export const ExPro = () => {
     };
 
     return (
-        <div className='ExPro_container' data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+        <div className='ExPro_container' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div className='ExPro_background'>
                 <div className='ExPro_title'>
                     <h4>Exciting Promotions at Nông Dân Online</h4>
