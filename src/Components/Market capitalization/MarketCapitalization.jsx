@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
-import regularRabbit from '../../assets/NFT_DUC6.png';
-import rareRabbit from '../../assets/cool_3.png';
-import legendaryRabbit from '../../assets/cool_1.png';
-import mythicalRabbit from '../../assets/NFT_DUC2.png';
+import regularRabbit from 'src/assets/NFT_DUC6.png';
+import rareRabbit from 'src/assets/cool_3';
+import legendaryRabbit from 'src/assets/cool_1.png';
+import mythicalRabbit from 'src/assets/NFT_DUC2.png';
 const cardsData = [
   {
     title: "Regular Rabbits",
