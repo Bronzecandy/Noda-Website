@@ -72,6 +72,16 @@
     font-size: 30px;
 }
 
+.ExPro_fade_in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;   
+}
+
+.ExPro_fade_out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
 /* Styles for smaller screens (tablets and mobile) */
 @media (min-width: 1025px) and (max-width: 1200px) {
     .ExPro_title {

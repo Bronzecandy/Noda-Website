@@ -2,13 +2,41 @@
 import React, { useState } from 'react';
 import './ExPro.css';
 import Gem from '../../assets/gem.png';
-import background_ExPro from '../../assets/background_ExPro.png';
+import background_ExPro_Old from '../../assets/background_ExPro.png';
+import background_ExPro_New from '../../assets/background_ExPro.png';
+import background_ExPro_Season from '../../assets/background_ExPro.png';
 
 export const ExPro = () => {
     const [activeTab, setActiveTab] = useState('New');
 
+    const [imageSrc, setImageSrc] = useState(background_ExPro_New); // Ảnh mặc định ban đầu
+    const [fade, setFade] = useState(false); // Trạng thái fade ảnh
+    const [fadeContent, setFadeContent] = useState(false); // Trạng thái fade nội dung
+
     const handleTabClick = (tab) => {
         setActiveTab(tab);
+
+        // Gây hiệu ứng fade trước khi đổi ảnh
+        setFade(true);
+        setFadeContent(true);
+
+        // Delay để tạo hiệu ứng fade
+        setTimeout(() => {
+            // Đổi ảnh dựa trên tab
+            if (tab === 'New') {
+                setImageSrc(background_ExPro_Old);
+            } else if (tab === 'Old') {
+                setImageSrc(background_ExPro_New);
+            } else if (tab === 'Seasons') {
+                setImageSrc(background_ExPro_Season);
+            }
+            setFade(false); // Gỡ hiệu ứng fade sau khi ảnh được đổi
+        }, 100); // Thời gian delay khớp với thời gian của hiệu ứng CSS
+
+        // Điều chỉnh thời gian fade content để nó nhanh hơn ảnh
+        setTimeout(() => {
+            setFadeContent(false);
+        }, 100); // Thời gian delay cho nội dung
     };
 
     return (
@@ -18,9 +46,8 @@ export const ExPro = () => {
                     <h4>Exciting Promotions at Nông Dân Online</h4>
                 </div>
                 <img
-                    src={background_ExPro}
-                    alt="Promotion"
-                    className="ExPro_img"
+                    src={imageSrc}
+                    className={`ExPro_img ${fade ? 'ExPro_fade_out' : 'ExPro_fade_in'}`} // Thêm lớp fade
                 />
                 <div className='ExPro_menu'>
                     <a onClick={() => handleTabClick('New')} className={activeTab === 'New' ? 'active' : ''}>New</a>
@@ -29,7 +56,7 @@ export const ExPro = () => {
                     <img src={Gem} />
                     <a onClick={() => handleTabClick('Seasons')} className={activeTab === 'Seasons' ? 'active' : ''}>Seasons</a>
                 </div>
-                <div className='ExPro_content'>
+                <div className={`ExPro_content ${fadeContent ? 'ExPro_fade_out' : 'ExPro_fade_in'}`}>
                     {activeTab === 'New' && (
                         <div className='content_new'>
                             <p >Get a 20% discount when purchasing Rabbit NFT within 7 days of creating your account!</p>
