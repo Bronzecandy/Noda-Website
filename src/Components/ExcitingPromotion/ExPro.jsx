@@ -4,7 +4,7 @@ import './ExPro.css';
 import Gem from '../../assets/gem.png';
 import background_ExPro_Old from '../../assets/background_ExPro.png';
 import background_ExPro_New from '../../assets/background_ExPro.png';
-import background_ExPro_Season from '../../assets/background_ExPro.png';
+import background_ExPro_Season from '../../assets/BG.png';
 
 export const ExPro = () => {
     const [activeTab, setActiveTab] = useState('New');
@@ -45,16 +45,18 @@ export const ExPro = () => {
                 <div className='ExPro_title'>
                     <h4>Exciting Promotions at Nông Dân Online</h4>
                 </div>
-                <img
-                    src={imageSrc}
-                    className={`ExPro_img ${fade ? 'ExPro_fade_out' : 'ExPro_fade_in'}`} // Thêm lớp fade
-                />
+                <div className='ExPro_img'>
+                    <img
+                        src={imageSrc}
+                        className={`${fade ? 'ExPro_fade_out' : 'ExPro_fade_in'}`} // Thêm lớp fade
+                    />
+                </div>
                 <div className='ExPro_menu'>
-                    <a onClick={() => handleTabClick('New')} className={activeTab === 'New' ? 'active' : ''}>New</a>
+                    <a onClick={() => handleTabClick('New')} className={`btn ${activeTab === 'New' ? 'active' : ''}`}>New</a>
                     <img src={Gem} />
-                    <a onClick={() => handleTabClick('Old')} className={activeTab === 'Old' ? 'active' : ''}>Old</a>
+                    <a onClick={() => handleTabClick('Old')} className={`btn ${activeTab === 'Old' ? 'active' : ''}`}>Old</a>
                     <img src={Gem} />
-                    <a onClick={() => handleTabClick('Seasons')} className={activeTab === 'Seasons' ? 'active' : ''}>Seasons</a>
+                    <a onClick={() => handleTabClick('Seasons')} className={`btn ${activeTab === 'Seasons' ? 'active' : ''}`}>Seasons</a>
                 </div>
                 <div className={`ExPro_content ${fadeContent ? 'ExPro_fade_out' : 'ExPro_fade_in'}`}>
                     {activeTab === 'New' && (
