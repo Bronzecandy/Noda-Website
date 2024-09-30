@@ -26,7 +26,7 @@ export default function Introduce() {
             </div>
             <div className='relative  w-[45%] sm:w-[50%]' data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200">
                 <img src="/image/board2.png" alt="Board" className="w-full" />
-                <div className='absolute sm:top-1/4 top-[12%]  left-[10%] xl:top-1/4 xl:left-[15%] right-0 bottom-0 m-auto w-[70%] md:w-[60%] '>
+                <div className='absolute sm:top-1/4 top-[12%]  left-[10%] xl:top-1/4  right-0 bottom-0 m-auto w-[70%] md:w-[60%] '>
                     <div className='relative'>
                         <div className='flex justify-center items-center flex-col'>
                             <span className='font-rowdies  text-[8px] md:text-xl xl:text-3xl  font-bold leading-tight text-center text-[#703519]'>
@@ -37,11 +37,11 @@ export default function Introduce() {
                             </span>
                        </div>
                     </div>
-                    <div className='absolute 
+                    <div className='absolute
                         xl:-left-[105%] 
                         -left-[11rem] 
-                        sm:-left-[12rem] 
-                        lg:-left-[20rem]
+                        sm:-left-[14rem] 
+                        lg:-left-[18rem]
                         md:-left-[14rem]
                         '>
                         <Button content={"Explore Us!"} />
