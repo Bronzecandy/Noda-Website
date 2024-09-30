@@ -24,7 +24,7 @@ const CoinStaking = () => {
 
             {/* Content (sử dụng relative để đảm bảo nó nằm trên hình ảnh) */}
             <div data-aos="zoom-in"
-                className="relative p-4 md:p-8  bg-[url('src/assets/background_theme.jpg')] border-8 border-[#703519] rounded-xl md:mx-5 lg:mx-10">
+                className="relative p-4 md:p-8  bg-[url('/src/assets/background_theme.jpg')] border-8 border-[#703519] rounded-xl md:mx-5 lg:mx-10">
                 {/* Header Section (Giới thiệu) */}
                 <div className="text-center p-4">
                     <h1 className="text-lg lg:text-4xl font-bold">

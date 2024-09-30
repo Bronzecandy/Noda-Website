@@ -20,7 +20,7 @@ export default function JoinUs() {
                 <div data-aos="zoom-in-right" className='p-2 bg-[#703519] rounded-lg w-full md:w-1/2'>
                     <div className=" p-2 bg-[#FBEDD0]  rounded-lg relative">
                         <div
-                            className="w-full aspect-video rounded cursor-pointer bg-[url('image/bg_banner.png')] bg-cover flex items-center justify-center"
+                            className="w-full aspect-video rounded cursor-pointer bg-[url('/image/bg_banner.png')] bg-cover flex items-center justify-center"
                             onClick={openModal}
                         >
                             <FaPlayCircle className="text-white text-8xl opacity-80 hover:opacity-100 hover:text-9xl transition-all duration-300" />
@@ -32,14 +32,14 @@ export default function JoinUs() {
                 </div>
 
                 {/* Content Column */}
-                <div data-aos="zoom-in-left" className="w-full aspect-[16/11.2] md:w-1/2 p-8 text-center text-[#703519] mb-8 md:mb-0 flex flex-col items-center justify-center bg-[url('image/Asset.png')] bg-cover bg-no-repeat ">
+                <div data-aos="zoom-in-left" className="w-full aspect-[16/11.2] md:w-1/2 p-8 text-center text-[#703519] mb-8 md:mb-0 flex flex-col items-center justify-center bg-[url('/image/Asset.png')] bg-cover bg-no-repeat ">
                     <h2 className="text-xl lg:text-4xl font-semibold">
                         Join Now and Start Your Journey
                     </h2>
                     <p className="text-xs lg:text-base mt-2 lg:mt-4">
                         Get started with a simple and quick process. Connect with other players and grow together in Nông Dân Online.
                     </p>
-                    <div className="mt-2 lg:mt-4 bg-[url('image/button.png')] bg-cover bg-no-repeat text-white  rounded-lg h-20 w-44 lg:h-32 lg:w-56 transition-transform hover:scale-105 duration-300 flex justify-center items-center">
+                    <div className="mt-2 lg:mt-4 bg-[url('/image/button.png')] bg-cover bg-no-repeat text-white  rounded-lg h-20 w-44 lg:h-32 lg:w-56 transition-transform hover:scale-105 duration-300 flex justify-center items-center">
                         <p className='text-[#FBEDD0] text-sm lg:text-base pt-[2.25rem] lg:pt-[1.75rem]'>Get Started</p>
                     </div>
                 </div>

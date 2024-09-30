@@ -60,7 +60,7 @@ export default function Header() {
 
                     {/* Desktop Menu (hidden on smaller screens) */}
                     <ul className="hidden  md:flex md:gap-4 xl:space-x-4 xl:bg-transparent xl:p-0  lg:space-x-4 lg:bg-transparent lg:p-0">
-                        <Link href="/" className="text-white hover:text-gray-400 w-[10vw]">
+                        <Link to="/" className="text-white hover:text-gray-400 w-[10vw]">
                             <span className='font-robotoSlab text-2xl md:text-xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                 Home
                             </span>
