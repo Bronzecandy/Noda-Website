@@ -209,6 +209,7 @@
         height: 645px;
         flex-direction: column;
         justify-content: center;
+        margin-top: 20px;
     }
 
     .PS_left{
