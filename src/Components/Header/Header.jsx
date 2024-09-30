@@ -22,7 +22,7 @@ export default function Header() {
                         <img
                             src="/image/logo.png"
                             alt="Logo"
-                            className='h-[3rem] xl:h-[4rem]'
+                            className='h-[3rem] lg:h-[4.5rem]'
                         />
                     </a>
 
@@ -39,7 +39,7 @@ export default function Header() {
                     {/* Mobile Menu (hidden on larger screens) */}
                     <ul
                         className={`fixed top-[7vh] rounded-md right-0 w-1/2 bg-amber-900 p-3 space-y-4 transition-all duration-300 ${isMobileMenuOpen ? 'block' : 'hidden'
-                            }  md:hidden sm:hidden `}
+                            }  xl:hidden`}
                         role="menu"
                     >
                         <li className='border-b-2 w-[100%]'>
@@ -59,7 +59,7 @@ export default function Header() {
                     </ul>
 
                     {/* Desktop Menu (hidden on smaller screens) */}
-                    <ul className="hidden  xl:flex xl:space-x-4 xl:bg-transparent xl:p-0 lg:flex lg:space-x-4 lg:bg-transparent lg:p-0">
+                    <ul className="hidden  xl:flex xl:space-x-4 xl:bg-transparent xl:p-0  lg:space-x-4 lg:bg-transparent lg:p-0">
                         <a href="#" className="text-white hover:text-gray-400 w-[10vw]">
                             <span className='font-robotoSlab text-2xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                 Home

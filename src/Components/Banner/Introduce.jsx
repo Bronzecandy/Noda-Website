@@ -32,10 +32,10 @@ export default function Introduce() {
                     <span className='font-rowdies  text-[10px] md:text-xl xl:text-3xl  font-bold leading-tight text-center text-[#703519]'>
                         What is NODA ?
                     </span>
-                    <span className='font-robotoSlab  ml-2  text-[7px] md:text-[10px] xl:text-xl font-normal  text-left text-[#703519]'>
+                    <span className='font-robotoSlab  ml-2  text-[7px] md:text-[10px] lg:text-sm xl:text-xl font-normal  text-left text-[#703519]'>
                         Nong Dan Online is a game application for mobile phones, developed by Noda game studio. This game uses a cryptocurrency whose exchange is BNB Binance. Nong Dan Online is expected to be a game worth experiencing.
                     </span>
-                    <div className='  h-auto'>
+                    <div className=' lg:h-[12vh]  h-auto'>
                         <Button content={"Explore Us!"} />
                     </div>
                 </div>

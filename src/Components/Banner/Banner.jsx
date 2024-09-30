@@ -5,7 +5,7 @@ export default function Banner() {
     return (
         <div className="h-[100vh] w-[100vw] bg-[url('/image/bg_banner.png')] bg-center bg-no-repeat bg-cover flex items-center justify-center relative">
             {/* Main Banner Image */}
-            <div className="relative w-[90vw] md:w-[60vw] lg:w-[45vw]">
+            <div className="relative w-[90vw] md:w-[60vw] lg:w-[60vw] xl:w-[45vw]">
                 <img
                     src="/image/bg_item_banner.png"
                     alt="Banner Item"
@@ -15,7 +15,7 @@ export default function Banner() {
                 {/* Button Section */}
                 <div className='absolute xl:top-[65%] xl:left-[30%] 
                 md:top-[65%] md:left-[25%] 
-                lg:top-[65%] lg:left-[30%] flex justify-center items-center'>
+                lg:top-[65%] lg:left-[20%] flex justify-center items-center'>
                     <Button content={"Play Now"} />
                 </div>
             </div>
