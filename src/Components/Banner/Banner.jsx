@@ -3,7 +3,7 @@ import Button from './button';
 
 export default function Banner() {
     return (
-        <div className="h-[100vh] w-[100vw] bg-[url('/image/bg_banner.png')] bg-center bg-no-repeat bg-cover flex items-center justify-center relative">
+        <div className="h-[100vh] w-[99vw] bg-[url('/image/bg_banner.png')] bg-center bg-no-repeat bg-cover flex items-center justify-center relative">
             {/* Main Banner Image */}
             <div className="relative w-[90vw] md:w-[70vw] lg:w-[70vw] xl:w-[45vw] ">
                 <img

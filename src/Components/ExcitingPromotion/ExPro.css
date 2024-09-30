@@ -27,10 +27,16 @@
 }
 
 .ExPro_img {
-    width: 60%;
-    height: auto;
-    border-radius: 8px;
+    width: 708px;
+    height: 285px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ExPro_img img{
+    object-fit: cover;
+    width: 100%;
 }
 
 .ExPro_menu {
@@ -42,6 +48,7 @@
 
 .ExPro_menu a {
     margin-inline: 15px;
+    cursor: pointer;
 }
 
 .ExPro_menu a:hover {
