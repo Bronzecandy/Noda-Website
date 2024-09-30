@@ -9,6 +9,7 @@ import Introduce from './Components/Banner/Introduce';
 import Banner from './Components/Banner/Banner';
 import { Partnership } from './Components/Partnership/Partnership';
 import MarketCapitalization from './Components/Market capitalization/MarketCapitalization';
+import CoinStaking from './Components/CoinStaking/CoinStaking';
 function App() {
 
   return (
@@ -28,6 +29,7 @@ function App() {
               <MarketCapitalization/>
               <ExPro />
               <Partnership />
+              <CoinStaking/>
               <Footer />
             </>
           }

@@ -56,9 +56,9 @@ const rabbitData = [
 const MarketCapitalization = () => {
   return (
     <>
-      <div className="p-2 md:p-12 text-[#703519]" >
+      <div className="p-2 md:p-12 text-[#703519]">
         <h2 className="text-4xl font-bold text-center mb-4 text-[#703519]">Market Capitalization</h2>
-        <table className="w-full text-center bg-[#FBEDD0] border-4 border-[#9F6028]">
+        <table className="w-full text-center bg-[#FBEDD0] border-4 border-[#9F6028]" data-aos="fade-down">
           <thead>
             <tr className=" text-base md:text-xl">
               <th className="border-2 border-[#9F6028] sm:py-4 sm:px-2">Rabbit Type</th>

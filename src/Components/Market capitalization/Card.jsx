@@ -2,9 +2,12 @@ import React from 'react';
 import background from '../../assets/Artboard_113_1.png'
 const Card = ({ title, content, image, reverse }) => {
     return (
-        <div className='relative w-[25rem] h-[21rem] overflow-hidden bg-cover bg-center text-[#703519]'  style={{ backgroundImage: `url(${background})` }}>
+        <div className='relative w-[25rem] h-[21rem] overflow-hidden bg-cover bg-center text-[#703519]' style={{ backgroundImage: `url(${background})` }}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-offset="200">
             <div className={`flex justify-between items-center p-6 h-full  ${reverse ? 'flex-row-reverse' : 'flex-row'} `}
-               >
+            >
                 <div className={`flex-1 text-left ${reverse ? 'pr-5' : 'pl-8'}`}>
                     <h2 className="text-xl font-bold text-brown-900">{title}</h2>
                     <p className="text-brown-900 mt-2 text-sm">{content}</p>
