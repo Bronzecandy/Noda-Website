@@ -13,7 +13,7 @@ export default function Header() {
                 <img
                     src="/image/header-bg.png"
                     alt="Background"
-                    className='w-full h-full sm:object-cover md:object-contain object-center'
+                    className='w-full h-full object-cover md:object-contain object-center'
                 />
 
                 <div className="absolute inset-0 flex items-center  md:justify-start justify-between xl:justify-start px-4 mb-2 xl:px-6">
