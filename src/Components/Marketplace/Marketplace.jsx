@@ -1,6 +1,7 @@
 import React from 'react';
 import './Marketplace.css';
 import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -10,7 +11,10 @@ import { EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 const Marketplace = () => {
   return (
-    <div className="marketplace-container">
+    <>
+    <Header />
+
+     <div className="marketplace-container">
       {/* Phần table-market chứa các sản phẩm theo hàng */}
       <div className="table-market">
         <div className="row">
@@ -186,6 +190,8 @@ const Marketplace = () => {
       </div>
       <Footer />
     </div>
+    </>
+   
   );
 };
 
