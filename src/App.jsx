@@ -1,5 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import Marketplace from './Components/Marketplace/Marketplace';
@@ -10,8 +11,13 @@ import Banner from './Components/Banner/Banner';
 import { Partnership } from './Components/Partnership/Partnership';
 import MarketCapitalization from './Components/Market capitalization/MarketCapitalization';
 import CoinStaking from './Components/CoinStaking/CoinStaking';
-function App() {
+import JoinUs from './Components/JoinUs/JoinUs';
+import AOS from 'aos';
 
+function App() {
+  useEffect(() => {
+    AOS.refresh(); // Refresh AOS sau khi render
+  }, []);
   return (
     <Router>
       <Routes>
@@ -26,10 +32,11 @@ function App() {
               <Header />
               <Banner />
               <Introduce />
-              <MarketCapitalization/>
+              <MarketCapitalization />
               <ExPro />
               <Partnership />
-              <CoinStaking/>
+              <CoinStaking />
+              <JoinUs />
               <Footer />
             </>
           }

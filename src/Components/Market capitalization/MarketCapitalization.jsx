@@ -57,10 +57,10 @@ const MarketCapitalization = () => {
   return (
     <>
       <div className="p-2 md:p-12 text-[#703519]">
-        <h2 className="text-4xl font-bold text-center mb-4 text-[#703519]">Market Capitalization</h2>
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 text-[#703519]">Market Capitalization</h2>
         <table className="w-full text-center bg-[#FBEDD0] border-4 border-[#9F6028]" data-aos="fade-down">
           <thead>
-            <tr className=" text-base md:text-xl">
+            <tr className=" text-xs md:text-xl">
               <th className="border-2 border-[#9F6028] sm:py-4 sm:px-2">Rabbit Type</th>
               <th className="border-2 border-[#9F6028] sm:py-4 sm:px-2">Quantity</th>
               <th className="border-2 border-[#9F6028] sm:py-4 sm:px-2">Estimated selling price (VND)</th>
@@ -69,7 +69,7 @@ const MarketCapitalization = () => {
           </thead>
           <tbody>
             {rabbitData.map((rabbit, index) => (
-              <tr key={index} className=" text-base md:text-xl">
+              <tr key={index} className=" text-xs md:text-xl">
                 <td className="border-2 border-[#9F6028] sm:py-4 sm:px-2 font-bold">{rabbit.type}</td>
                 <td className="border-2 border-[#9F6028] sm:py-4 sm:px-2">{rabbit.quantity}</td>
                 <td className="border-2 border-[#9F6028] sm:py-4 sm:px-2">{rabbit.sellingPrice}</td>
@@ -78,9 +78,9 @@ const MarketCapitalization = () => {
             ))}
           </tbody>
         </table>
-        <p className="mt-4 text-left font-semibold  text-base md:text-xl ">*Total expected capitalization value: 1.8 billion VND</p>
+        <p className="mt-4 text-left font-semibold  text-xs md:text-xl ">*Total expected capitalization value: 1.8 billion VND</p>
       </div>
-      <div className="flex flex-wrap justify-center gap-4 p-4">
+      <div className="flex flex-wrap justify-center gap-4 p-0 lg:p-4">
       {cardsData.map((card, index) => (
         <Card 
           key={index} 

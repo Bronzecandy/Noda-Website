@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -8,7 +8,7 @@ export default function Header() {
     };
 
     return (
-        <header className='w-full fixed top-0 left-0 flex justify-center items-start z-50 xl:mt-3'>
+        <header className='w-[100vw] fixed top-0 left-0 flex justify-center items-start z-50 xl:mt-3'>
             <nav className="relative max-w-[100vw] xl:max-w-[85vw] md:max-w-[90vw] h-[9vh] xl:h-[10vh]">
                 <img
                     src="/image/header-bg.png"
@@ -18,13 +18,13 @@ export default function Header() {
 
                 <div className="absolute inset-0 flex items-center  md:justify-start justify-between xl:justify-start px-4 mb-2 xl:px-6">
                     {/* Logo */}
-                    <a href="#" className='flex items-center mr-5'>
+                    <Link to="/" className='flex items-center mr-5'>
                         <img
                             src="/image/logo.png"
                             alt="Logo"
                             className='h-[3rem] md:h-[3rem] lg:h-[4rem]'
                         />
-                    </a>
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -43,33 +43,33 @@ export default function Header() {
                         role="menu"
                     >
                         <li className='border-b-2 w-[100%]'>
-                            <a href="#" className="text-white hover:text-gray-400">
+                            <Link to="/" className="text-white hover:text-gray-400">
                                 <span className='font-robotoSlab text-[0.8rem] font-bold text-[#F0D0C0]'>
                                     Home
                                 </span>
-                            </a>
+                            </Link>
                         </li>
                         <li className='border-b-2 w-[100%]'>
-                            <a href="#" className="text-white hover:text-gray-400">
+                            <Link to="/marketplace" className="text-white hover:text-gray-400">
                                 <span className='font-robotoSlab text-[0.8rem] font-bold text-[#F0D0C0]'>
                                     Marketplace
                                 </span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
                     {/* Desktop Menu (hidden on smaller screens) */}
                     <ul className="hidden  md:flex md:gap-4 xl:space-x-4 xl:bg-transparent xl:p-0  lg:space-x-4 lg:bg-transparent lg:p-0">
-                        <a href="#" className="text-white hover:text-gray-400 w-[10vw]">
+                        <Link href="/" className="text-white hover:text-gray-400 w-[10vw]">
                             <span className='font-robotoSlab text-2xl md:text-xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                 Home
                             </span>
-                        </a>
-                        <a href="#" className="text-white hover:text-gray-400 w-[10vw] ">
+                        </Link>
+                        <Link to="/marketplace" className="text-white hover:text-gray-400 w-[10vw] ">
                             <span className='font-robotoSlab text-2xl md:text-xl font-bold text-[#F0D0C0] hover:text-[1.6rem]'>
                                 Marketplace
                             </span>
-                        </a>
+                        </Link>
                     </ul>
                 </div>
             </nav>
