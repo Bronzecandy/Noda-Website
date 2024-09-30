@@ -14,7 +14,7 @@ export default function Banner() {
 
                 {/* Button Section */}
                 <div className='absolute 
-                xl:top-[80%] xl:-left-[45%]
+                xl:top-[62%] xl:-left-[35%]
                 md:top-[65%] md:-left-[15%]
                 top-[65%] -left-[20%]
                 sm:top-[65%] sm:-left-[10%]
