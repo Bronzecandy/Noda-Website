@@ -111,7 +111,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC2.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC2.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
@@ -138,7 +138,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC3.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC3.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
@@ -156,7 +156,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC5.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC5.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
@@ -165,7 +165,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC4.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC4.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
@@ -174,7 +174,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC6.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC6.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
@@ -192,7 +192,7 @@
   aspect-ratio: 1 / 1; /* Tỷ lệ khung hình 1:1, có thể thay đổi tùy theo tỷ lệ của ảnh */
   width: auto; /* Để chiều rộng tự điều chỉnh theo chiều cao */
   height: 110px; /* Đặt chiều cao cố định cho item */
-  background-image: url(/src/assets/NFT_DUC1.PNG); /* Đường dẫn tới ảnh nền */
+  background-image: url(/src/assets/NFT_DUC1.png); /* Đường dẫn tới ảnh nền */
   background-size: contain; /* Giữ tỷ lệ ảnh, không bị cắt */
   margin: auto;
  
