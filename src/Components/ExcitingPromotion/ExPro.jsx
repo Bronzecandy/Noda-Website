@@ -33,8 +33,8 @@ export const ExPro = () => {
             setTimeout(() => {
                 setIsImageTransitioning(false);
                 setIsContentTransitioning(false);
-            }, 600); // Thời gian chuyển đổi ảnh và nội dung mới (match với duration CSS)
-        }, 600); // Thời gian cho hiệu ứng fade-out
+            }, 300); // Thời gian chuyển đổi ảnh và nội dung mới (match với duration CSS)
+        }, 300); // Thời gian cho hiệu ứng fade-out
     };
 
     return (

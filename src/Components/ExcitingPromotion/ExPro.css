@@ -82,7 +82,7 @@
 
 /* CSS cho hiệu ứng chuyển đổi */
 .ExPro_img_transition {
-    transition: transform 0.6s ease-in, opacity 0.6s ease-in;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .fade-in {
@@ -96,7 +96,7 @@
 }
 
 .ExPro_content {
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .ExPro_content.fade-in {
