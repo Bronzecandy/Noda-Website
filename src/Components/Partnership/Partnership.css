@@ -353,7 +353,7 @@
 
 @media (max-width: 320px){
     .PS_container{
-        height: 380px;
+        height: 320px;
     }
 
     .PS_left{
@@ -364,22 +364,22 @@
     }
     
     .PS_right{
-        width: 306px;
-        height: 223px;
+        width: 264px;
+        height: 185px;
         right: 0px;
         /* top: 1420px; */
     }
     
     .PS_title{
         padding-top: 41px;
-        font-size: 10px;
-        margin-left: 30px;
+        font-size: 9px;
+        margin-left: 17px;
     }
     
     .PS_content{
-        font-size: 6.3px;
-        padding-inline: 85px;
-        margin-left: 30px;
+        font-size: 5.3px;
+        padding-inline: 75px;
+        margin-left: 18px;
     }
     
     .PS_content p{
@@ -389,7 +389,7 @@
     .PS_button{
         width: 65px;
         height: 36px;
-        margin-left: 136px;
+        margin-left: 105px;
     }
     
     .PS_button p{

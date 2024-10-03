@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './ExPro.css';
 import Gem from '../../assets/gem.png';
@@ -8,35 +7,34 @@ import background_ExPro_Season from '../../assets/BG.png';
 
 export const ExPro = () => {
     const [activeTab, setActiveTab] = useState('New');
-
-    const [imageSrc, setImageSrc] = useState(background_ExPro_New); // Ảnh mặc định ban đầu
-    const [fade, setFade] = useState(false); // Trạng thái fade ảnh
-    const [fadeContent, setFadeContent] = useState(false); // Trạng thái fade nội dung
+    const [imageSrc, setImageSrc] = useState(background_ExPro_New); 
+    const [isImageTransitioning, setIsImageTransitioning] = useState(false); // Trạng thái chuyển ảnh
+    const [isContentTransitioning, setIsContentTransitioning] = useState(false); // Trạng thái chuyển nội dung
 
     const handleTabClick = (tab) => {
-        setActiveTab(tab);
+        if (tab === activeTab) return; // Ngăn việc thay đổi tab trùng lặp
 
-        // Gây hiệu ứng fade trước khi đổi ảnh
-        setFade(true);
-        setFadeContent(true);
+        // Bắt đầu hiệu ứng fade-out cho ảnh và nội dung
+        setIsImageTransitioning(true);
+        setIsContentTransitioning(true);
 
-        // Delay để tạo hiệu ứng fade
+        // Chờ hoàn tất hiệu ứng fade-out trước khi đổi nội dung
         setTimeout(() => {
-            // Đổi ảnh dựa trên tab
+            setActiveTab(tab);
             if (tab === 'New') {
-                setImageSrc(background_ExPro_Old);
-            } else if (tab === 'Old') {
                 setImageSrc(background_ExPro_New);
+            } else if (tab === 'Old') {
+                setImageSrc(background_ExPro_Old);
             } else if (tab === 'Seasons') {
                 setImageSrc(background_ExPro_Season);
             }
-            setFade(false); // Gỡ hiệu ứng fade sau khi ảnh được đổi
-        }, 100); // Thời gian delay khớp với thời gian của hiệu ứng CSS
 
-        // Điều chỉnh thời gian fade content để nó nhanh hơn ảnh
-        setTimeout(() => {
-            setFadeContent(false);
-        }, 100); // Thời gian delay cho nội dung
+            // Kết thúc hiệu ứng fade-in sau khi ảnh và nội dung đã được thay đổi
+            setTimeout(() => {
+                setIsImageTransitioning(false);
+                setIsContentTransitioning(false);
+            }, 600); // Thời gian chuyển đổi ảnh và nội dung mới (match với duration CSS)
+        }, 600); // Thời gian cho hiệu ứng fade-out
     };
 
     return (
@@ -48,7 +46,7 @@ export const ExPro = () => {
                 <div className='ExPro_img'>
                     <img
                         src={imageSrc}
-                        className={`${fade ? 'ExPro_fade_out' : 'ExPro_fade_in'}`} // Thêm lớp fade
+                        className={`ExPro_img_transition ${isImageTransitioning ? 'fade-out' : 'fade-in'}`} 
                     />
                 </div>
                 <div className='ExPro_menu'>
@@ -58,10 +56,10 @@ export const ExPro = () => {
                     <img src={Gem} />
                     <a onClick={() => handleTabClick('Seasons')} className={`btn ${activeTab === 'Seasons' ? 'active' : ''}`}>Seasons</a>
                 </div>
-                <div className={`ExPro_content ${fadeContent ? 'ExPro_fade_out' : 'ExPro_fade_in'}`}>
+                <div className={`ExPro_content ${isContentTransitioning ? 'fade-out' : 'fade-in'}`}>
                     {activeTab === 'New' && (
                         <div className='content_new'>
-                            <p >Get a 20% discount when purchasing Rabbit NFT within 7 days of creating your account!</p>
+                            <p>Get a 20% discount when purchasing Rabbit NFT within 7 days of creating your account!</p>
                             <p>Join our referral program to earn commissions when your friends purchase Rabbit NFT or participate in in-game activities!</p>
                         </div>
                     )}

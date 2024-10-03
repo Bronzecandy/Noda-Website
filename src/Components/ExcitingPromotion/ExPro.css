@@ -80,15 +80,35 @@
     font-size: 30px;
 }
 
-.ExPro_fade_in {
-    opacity: 1;
-    transition: opacity 0.3s ease-in;   
+/* CSS cho hiệu ứng chuyển đổi */
+.ExPro_img_transition {
+    transition: transform 0.6s ease-in, opacity 0.6s ease-in;
 }
 
-.ExPro_fade_out {
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
+.fade-in {
+    transform: translateX(0);
+    opacity: 1;
 }
+
+.fade-out {
+    transform: translateX(5%);
+    opacity: 0;
+}
+
+.ExPro_content {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.ExPro_content.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ExPro_content.fade-out {
+    opacity: 0;
+    transform: translateX(-5%);
+}
+
 
 /* Styles for smaller screens (tablets and mobile) */
 @media (min-width: 1025px) and (max-width: 1200px) {
